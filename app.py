@@ -11,11 +11,26 @@ db = client.web_db
 collection = db.mycollection
 
 
+
+
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
+@app.route('/form', methods=['GET' , 'POST'])
+def form():
+    if request.method == "POST" :
+        # Handle Submission
+
+        name = request.form.get('name')
+        email = request.form.get('email')
+        return f"Form submitted! Name : {name} , Email :{email}"
+    return render_template('form.html')
+
+
+   
 
 
 
