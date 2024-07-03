@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', function(){
         body : JSON.stringify(data) //convert data object to a JSOn string)
     })
     .then(response => response.json()) //convert the response to JSON
-    .them(json => {
+    .then(json => {
         feedback.textContent = json.messsege; //set feedack mesege to repnse messege 
         form.insertAdjacentElement('beforebegin', feedback); //insert the feedback messege before the form
         form.reset(); //reset the form fields
     })
     .catch(error => {
-        feedback.textContent = 'error submitting form. try again' //set feedback messge to error
+        feedback.textContent = 'error submitting form. try again'; //set feedback messge to error
         feedback.style.color = 'red'; 
         form.insertAdjacentElement('beforebegin', feedback); //insert the feedback messege before the form
     });
