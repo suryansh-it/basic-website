@@ -29,7 +29,7 @@ def form():
         #insert data in mongo 
         collection.insert_one({"name" : name , "email" : email})
 
-        return jsonify({'message': f"Form submitted! Name: {name}, Email: {email}"})  # Send a JSON response
+        return jsonify({'message': f"Form submitted! name: {name}, email: {email}"})  # Send a JSON response
     return render_template('form.html')
 
 
