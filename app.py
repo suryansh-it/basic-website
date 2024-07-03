@@ -22,7 +22,7 @@ def index():
 def form():
     if request.method == "POST" :
         # Handle Submission
-
+        data = request.get_json() #get JSon data sent by client
         name = request.form.get('name')
         email = request.form.get('email')
 
