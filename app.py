@@ -23,13 +23,13 @@ def form():
     if request.method == "POST" :
         # Handle Submission
         data = request.get_json() #get JSon data sent by client
-        name = request.form.get('name')
-        email = request.form.get('email')
+        name = data.get('name')
+        email = data.get('email')
 
         #insert data in mongo 
         collection.insert_one({"name" : name , "email" : email})
 
-        # return f"Form submitted! Name : {name} , Email :{email}"
+        return jsonify({'message': f"Form submitted! Name: {name}, Email: {email}"})  # Send a JSON response
     return render_template('form.html')
 
 
