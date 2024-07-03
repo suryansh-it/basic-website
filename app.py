@@ -13,7 +13,6 @@ collection = db.mycollection
 
 
 
-
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -26,7 +25,11 @@ def form():
 
         name = request.form.get('name')
         email = request.form.get('email')
-        return f"Form submitted! Name : {name} , Email :{email}"
+
+        #insert data in mongo 
+        collection.insert_one({"name" : name , "email" : email})
+
+        # return f"Form submitted! Name : {name} , Email :{email}"
     return render_template('form.html')
 
 
