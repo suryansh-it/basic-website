@@ -18,7 +18,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/form', methods=['POST'])
+@app.route('/form', methods=['GET' , 'POST'])
 def form():
     if request.method == "POST" :
         # Handle Submission
