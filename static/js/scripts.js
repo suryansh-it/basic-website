@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function(){
     })
     .then(response => response.json()) //convert the response to JSON
     .then(json => {
-        feedback.textContent = json.messsege; //set feedack mesege to repnse messege 
+        feedback.textContent = json.message; //set feedack mesege to repnse messege 
         form.insertAdjacentElement('beforebegin', feedback); //insert the feedback messege before the form
         form.reset(); //reset the form fields
     })
