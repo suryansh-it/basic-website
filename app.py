@@ -7,8 +7,8 @@ app = Flask(__name__)
 #connect to mongo
 
 client = MongoClient('localhost',27017)
-db = client.web_db
-collection = db.mycollection
+db = client['web_db']
+collection = db['mycollection']
 
 
 
