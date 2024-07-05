@@ -1,72 +1,70 @@
-/* static/css/styles.css */
 body {
   font-family: Arial, sans-serif;
-  margin: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 nav {
   background-color: #333;
-  overflow: hidden;
+  color: #fff;
+  padding: 10px 0;
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-  float: left;
+  margin: 0 15px;
 }
 
 nav ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+  color: #fff;
   text-decoration: none;
-}
-
-nav ul li a:hover {
-  background-color: #111;
 }
 
 h1 {
   text-align: center;
+  margin-top: 50px;
 }
 
 form {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 50px auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background-color: #f9f9f9;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
+form label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-input[type="text"],
-input[type="email"] {
+form input[type="text"],
+form input[type="email"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
+form button {
+  padding: 10px 15px;
+  background: #5cb85c;
   border: none;
-  border-radius: 5px;
+  color: #fff;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #555;
+form button:hover {
+  background: #4cae4c;
 }
